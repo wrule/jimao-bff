@@ -10,6 +10,7 @@
   "description": "",
   "devDependencies": {
     "@types/koa": "^2.15.0",
+    "@types/module-alias": "^2.0.4",
     "@types/node": "^20.17.6",
     "nodemon": "^3.1.7",
     "pm2": "^5.4.2",
