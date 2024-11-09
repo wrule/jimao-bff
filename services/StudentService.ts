@@ -1,7 +1,7 @@
 
 class StudentService {
   public getList() {
-    return new Promise((resolve) => {
+    return new Promise<any[]>((resolve) => {
       setTimeout(() => {
         resolve([
           { name: '张三', age: 31 },
