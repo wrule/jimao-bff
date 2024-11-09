@@ -8,7 +8,7 @@ class TSXController {
   @route('/abc')
   @GET()
   public async list(ctx: IRouterContext) {
-    ctx.body = renderToString(createElement(this.render));
+    ctx.body = renderToString(createElement(() => this.render()));
   }
 
   public render() {
