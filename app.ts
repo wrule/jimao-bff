@@ -1,6 +1,8 @@
 import Koa from 'koa';
 import a from '@/services/a';
 
+const PORT = 3000;
+
 export
 async function main() {
   a();
@@ -8,5 +10,7 @@ async function main() {
   app.use((ctx) => {
     ctx.body = 'Hello Koa';
   });
-  app.listen(3000);
+  app.listen(PORT, () => {
+    console.log(`service works on port ${PORT} ...`);
+  });
 }
