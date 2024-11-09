@@ -8,6 +8,8 @@ const PORT = 3000;
 
 export
 async function main() {
+  console.log('你好，世界');
+  return;
   a();
   const app = new Koa();
   // app.use((ctx) => {
