@@ -5,7 +5,7 @@ import { renderToString } from 'react-dom/server';
 
 @route('/api/tsx')
 class TSXController {
-  @route('/abc')
+  @route('')
   @GET()
   public async list(ctx: IRouterContext) {
     ctx.body = '<!DOCTYPE html>\n' + renderToString(createElement(() => this.render()));
