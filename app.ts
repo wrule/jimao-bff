@@ -3,14 +3,18 @@ import a from '@/services/a';
 import { createContainer, Lifetime } from 'awilix';
 import { loadControllers, scopePerRequest } from 'awilix-koa';
 // import b from 'koa-swig';
+import Test from './test';
+import React from 'react';
+import { renderToString } from 'react-dom/server';
 
 const PORT = 3000;
 
 export
 async function main() {
-  console.log('你好，世界');
+  const node = React.createElement(Test);
+  const a = renderToString(node);
+  console.log(a);
   return;
-  a();
   const app = new Koa();
   // app.use((ctx) => {
   //   ctx.body = 'Hello Koa';
