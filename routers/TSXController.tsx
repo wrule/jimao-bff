@@ -14,9 +14,25 @@ class TSXController {
   public render() {
     const [num, setNum] = useState<number>(1234);
 
-    return <div style={{ color: 'red' }} onClick={() => {
-      setNum(() => num + 1);
-    }}>{num}</div>;
+    return (
+      <>
+        <html lang="en">
+          <head>
+            <title>TSX Test</title>
+          </head>
+          <body>
+            <div>
+              <h1>这是一个TSX的测试页面</h1>
+            </div>
+            <div>
+              <span>当前数字是：</span>
+              <span>{num}</span>
+              <button>增加</button>
+            </div>
+          </body>
+        </html>
+      </>
+    );
   }
 }
 
