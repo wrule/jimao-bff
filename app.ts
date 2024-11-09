@@ -26,6 +26,7 @@ async function main() {
   });
   app.use(scopePerRequest(container));
   app.use(loadControllers(`${import.meta.dirname}/routers/*.ts`));
+  app.use(loadControllers(`${import.meta.dirname}/routers/*.tsx`));
 
   app.listen(PORT, () => {
     console.log(`service works on port ${PORT} ...`);
