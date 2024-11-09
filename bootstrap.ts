@@ -1,7 +1,7 @@
 import { addAliases } from 'module-alias';
 
 addAliases({
-  '@': __dirname,
+  '@': import.meta.dirname,
 });
 
 import { main } from '@/app';
