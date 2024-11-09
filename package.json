@@ -21,9 +21,11 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "awilix": "^12.0.3",
     "awilix-koa": "^11.0.0",
     "koa": "^2.15.3",
     "koa-router": "^13.0.1",
+    "koa-static": "^5.0.0",
     "koa-swig": "^2.2.1",
     "lodash": "^4.17.21",
     "log4js": "^6.9.1",
