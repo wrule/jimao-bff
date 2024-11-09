@@ -2,7 +2,7 @@ import Koa from 'koa';
 import a from '@/services/a';
 import { createContainer, Lifetime } from 'awilix';
 import { loadControllers, scopePerRequest } from 'awilix-koa';
-import b from 'koa-swig';
+// import b from 'koa-swig';
 
 const PORT = 3000;
 
