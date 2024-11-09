@@ -10,24 +10,22 @@ const PORT = 3000;
 
 export
 async function main() {
-  const node = React.createElement(Test);
-  const a = renderToString(node);
-  console.log(a);
-  return;
+  // const node = React.createElement(Test);
+  // const a = renderToString(node);
+  // console.log(a);
+  // return;
   const app = new Koa();
-  // app.use((ctx) => {
-  //   ctx.body = 'Hello Koa';
-  // });
 
   const container = createContainer();
-  container.loadModules([`${__dirname}/services/*.ts`], {
+  container.loadModules([`${import.meta.dirname}/services/*.ts`], {
+    esModules: true,
     formatName: 'camelCase',
     resolverOptions: {
       lifetime: Lifetime.SCOPED,
     },
   });
   app.use(scopePerRequest(container));
-  app.use(loadControllers(`${__dirname}/routers/*.ts`));
+  app.use(loadControllers(`${import.meta.dirname}/routers/*.ts`));
 
   app.listen(PORT, () => {
     console.log(`service works on port ${PORT} ...`);
